@@ -1,0 +1,69 @@
+{
+  "name": "@yinzhouzhi/mcp-filesystem-server",
+  "version": "1.0.7",
+  "description": "本地文件系统操作服务器 - 基于STDIO通信的MCP服务，支持文件和目录操作",
+  "main": "index.js",
+  "bin": {
+    "mcp-filesystem-server": "bin/cli.js"
+  },
+  "scripts": {
+    "start": "node index.js",
+    "start:mcp": "node src/mcp-server.js",
+    "test": "node test/test-main.js",
+    "test:watch": "node test/test-watch.js",
+    "test:rotation": "node test/test-rotation.js",
+    "test:all": "node test/test-all.js",
+    "test:monitor": "node test-monitor-pool.js",
+    "test:performance": "node test-performance.js",
+    "monitor:basic": "node src/examples/monitor-basic-example.js",
+    "example:watch": "node src/examples/watch-example.js",
+    "prepare": "npm run build",
+    "build": "if not exist dist mkdir dist && copy index.js dist && copy package.json dist && copy README.md dist && xcopy /E /I src dist\\src && xcopy /E /I bin dist\\bin"
+  },
+  "keywords": [
+    "filesystem",
+    "mcp",
+    "electron",
+    "stdio",
+    "file-server",
+    "model-context-protocol",
+    "ai",
+    "tools",
+    "office",
+    "word",
+    "excel"
+  ],
+  "author": {
+    "name": "Your Name",
+    "email": "your.email@example.com"
+  },
+  "license": "MIT",
+  "dependencies": {
+    "@modelcontextprotocol/sdk": "^1.10.1",
+    "chokidar": "^3.6.0",
+    "zod": "^3.22.4",
+    "commander": "^11.1.0",
+    "mammoth": "^1.7.0",
+    "exceljs": "^4.4.0"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/yourusername/mcp-filesystem-server.git"
+  },
+  "bugs": {
+    "url": "https://github.com/yourusername/mcp-filesystem-server/issues"
+  },
+  "homepage": "https://github.com/yourusername/mcp-filesystem-server#readme",
+  "engines": {
+    "node": ">=14.0.0"
+  },
+  "files": [
+    "index.js",
+    "src/**",
+    "bin/**",
+    "README.md"
+  ],
+  "publishConfig": {
+    "access": "public"
+  }
+}
