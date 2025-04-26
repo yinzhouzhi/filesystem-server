@@ -35,6 +35,22 @@
 - 🛠️ 包含命令行工具，方便直接使用
 - 📊 高性能设计：缓存机制、流处理、异步操作
 
+## Cursor
+```bash
+{
+    "mcpServers": {
+        "filesystem": {
+          "command": "npx",
+          "args": [
+            "-y",
+            "@yinzhouzhi/mcp-filesystem-server",
+            "start"
+          ],
+          "autoConnect": true
+        },
+    }
+}
+
 ## 安装
 
 ```bash
